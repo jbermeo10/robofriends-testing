@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'; //for Redux use
-import './App.css';
+//for Redux use
+import { connect } from 'react-redux'; 
+import { setSearchField, requestRobots } from '../actions'; //Importing the actions
+
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
-//Importing the actions:
-import { setSearchField, requestRobots } from '../actions'; //for Redux use 
+import Header from '../components/Header';
+import './App.css';
 
 
 //piece of state to listen to and send as props
@@ -29,6 +31,12 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class App extends Component {
+  constructor () {
+    super()
+    this.state = {
+      count: 1
+    }
+  }
 
   componentDidMount() {
     this.props.onRequestRobots();
@@ -47,12 +55,15 @@ class App extends Component {
     <h1>Cargando...</h1> :
     (
       <div className='tc'>
-        <h1 className='f1'>Amigos Robots</h1>
+        {/* <h1 className='f1'>Amigos Robots</h1> */}
+        <Header count={this.state.count}/>
         <SearchBox searchChange={onSearchChange}/>
         <Scroll>
-          <ErrorBoundry>
-            <CardList robots={filteredRobots}/>
-          </ErrorBoundry>
+          { isPending ? <h1>Cargando...</h1> :
+            <ErrorBoundry>
+              <CardList robots={filteredRobots}/>
+            </ErrorBoundry>
+          }
         </Scroll>
       </div>
     );
