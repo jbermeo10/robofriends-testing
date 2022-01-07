@@ -51,10 +51,10 @@ class App extends Component {
       return robot.name.toLowerCase().includes(searchField.toLowerCase());
     })
     
-    return (
-    // return isPending ?
-    // <h1>Cargando...</h1> :
-    // (
+    // return (
+    return isPending ?
+    <h1>Cargando...</h1> :
+    (
       <div className='tc'>
         {/* <h1 className='f1'>Amigos Robots</h1> */}
         <Header count={this.state.count}/>
