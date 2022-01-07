@@ -29,13 +29,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class App extends Component {
-  // constructor () {
-  //   super()
-  //   this.state = {
-  //     robots: [],
-  //     //searchfield: ''
-  //   }
-  // }
 
   componentDidMount() {
     this.props.onRequestRobots();
@@ -44,12 +37,7 @@ class App extends Component {
     // .then(users => this.setState({ robots: users}));
   }
 
-// onSearchChange = (event) => {
-//   this.setState({searchfield: event.target.value})
-// }
-
   render() {
-    // const { robots } = this.state;
     const { searchField, onSearchChange, robots, isPending } = this.props;
     const filteredRobots = robots.filter(robot =>{
       return robot.name.toLowerCase().includes(searchField.toLowerCase());
