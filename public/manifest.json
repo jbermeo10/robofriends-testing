@@ -1,6 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Robofriends",
+  "name": "Aplicacion de Amigos Robots",
+  "description": "Donde los robots se hacen amigos",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,17 +11,37 @@
       "type": "image/x-icon"
     },
     {
+      "src": "favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "favicon-24x24.png",
+      "type": "image/png",
+      "sizes": "24x24"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "favicon-64x64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
       "src": "android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "android-chrome-256x256.png",
+      "src": "android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "index.html",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
