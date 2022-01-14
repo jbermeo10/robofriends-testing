@@ -9,8 +9,9 @@ const initialStateSearch = {
     searchField : ''
 }
 
+// A Reducer take an action and spit out a state
+// Reducer 1
 export const searchRobots = (state=initialStateSearch, action={}) => {
-  //console.log(action.type);
   switch(action.type) {
     case CHANGE_SEARCH_FIELD:
       //This is a way to return a new state with everything in the state
@@ -26,15 +27,15 @@ export const searchRobots = (state=initialStateSearch, action={}) => {
 
 const initialStateRobots = {
   robots: [],
-  // isPending : false,
-  isPending : true,
+  isPending : false,
   error: ''
 }
 
+// Reducer 2
 export const requestRobots = (state=initialStateRobots, action={}) => {
   switch(action.type) {
     case REQUEST_ROBOTS_PENDING:
-      return Object.assign({}, state, { isPending: true})
+      return Object.assign({}, state, { isPending: true })
     case REQUEST_ROBOTS_SUCCESS:
       return Object.assign({}, state, { robots: action.payload, isPending: false})
     case REQUEST_ROBOTS_FAILED:
