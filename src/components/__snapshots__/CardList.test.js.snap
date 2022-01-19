@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`se espera renderizar el componente Cardlist 1`] = `
+exports[`se espera renderizar el componente CardList 1`] = `
 <div>
   <Card
     email="john@gmail.com"

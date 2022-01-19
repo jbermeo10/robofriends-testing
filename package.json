@@ -1,8 +1,8 @@
 {
-  "name": "robofriends-pwa",
+  "name": "robofriends-testing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jbermeo10.github.io/robofriends-pwa",
+  "homepage": "https://jbermeo10.github.io/robofriends-testing",
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
